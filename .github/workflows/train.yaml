@@ -64,7 +64,7 @@ jobs:
                       "class_prompt": "a photo of a person",
                       "instance_data": "${{ steps.upload-training-data.outputs.INSTANCE_DATA_URL }}",
                       "max_train_steps": ${{ inputs.max-train-steps }},
-                      "ckpt_base" : "https://huggingface.co/prompthero/openjourney/blob/main/mdjrny-v4.ckpt"
+                      "ckpt_base" : "https://huggingface.co/prompthero/openjourney/resolve/main/mdjrny-v4.ckpt"
                   },
                   "model": "${{ inputs.model-name }}",
                   "trainer_version": "9c41656f8ae2e3d2af4c1b46913d7467cd891f2c1c5f3d97f1142e876e63ed7a"

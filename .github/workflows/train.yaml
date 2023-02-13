@@ -64,7 +64,7 @@ jobs:
                       "class_prompt": "a photo of a person",
                       "instance_data": "${{ steps.upload-training-data.outputs.INSTANCE_DATA_URL }}",
                       "max_train_steps": ${{ inputs.max-train-steps }},
-                      "ckpt_base" : "https://huggingface.co/22h/vintedois-diffusion-v0-1/raw/main/model.ckpt"
+                      "ckpt_base" : "https://huggingface.co/22h/vintedois-diffusion-v0-1/resolve/main/model.ckpt"
 
                   },
                   "model": "${{ inputs.model-name }}",

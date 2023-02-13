@@ -66,7 +66,7 @@ jobs:
                       "max_train_steps": ${{ inputs.max-train-steps }}
                   },
                   "model": "${{ inputs.model-name }}",
-                  "trainer_version": "f178fa7a1ae43a9a9af01b833b9d2ecf97b1bcb0acfd2dc5dd04895e042863f1"
+                  "trainer_version": "d5e058608f43886b9620a8fbb1501853b8cbae4f45c857a014011c86ee614ffb"
               }' \
           https://dreambooth-api-experimental.replicate.com/v1/trainings
 

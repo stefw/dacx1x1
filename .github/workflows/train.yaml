@@ -63,10 +63,12 @@ jobs:
                       "instance_prompt": "a photo of a ${{ inputs.prompt-identifier }} person",
                       "class_prompt": "a photo of a person",
                       "instance_data": "${{ steps.upload-training-data.outputs.INSTANCE_DATA_URL }}",
-                      "max_train_steps": ${{ inputs.max-train-steps }}
+                      "max_train_steps": ${{ inputs.max-train-steps }},
+                      "ckpt_base" : "https://huggingface.co/22h/vintedois-diffusion-v0-1/raw/main/model.ckpt"
+
                   },
                   "model": "${{ inputs.model-name }}",
-                  "trainer_version": "d5e058608f43886b9620a8fbb1501853b8cbae4f45c857a014011c86ee614ffb"
+                  "trainer_version": "9c41656f8ae2e3d2af4c1b46913d7467cd891f2c1c5f3d97f1142e876e63ed7a"
               }' \
           https://dreambooth-api-experimental.replicate.com/v1/trainings
 

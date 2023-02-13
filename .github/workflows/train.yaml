@@ -19,8 +19,6 @@ on:
         default: 2000
 
 # Find your Replicate API token at https://replicate.com/account
-#"ckpt_base" : "https://huggingface.co/prompthero/openjourney/resolve/main/mdjrny-v4.ckpt"
-# à mettre en dessous de max trains
 env:
   replicate-api-token: ${{ secrets.REPLICATE_API_TOKEN }}
 
@@ -65,11 +63,10 @@ jobs:
                       "instance_prompt": "a photo of a ${{ inputs.prompt-identifier }} person",
                       "class_prompt": "a photo of a person",
                       "instance_data": "${{ steps.upload-training-data.outputs.INSTANCE_DATA_URL }}",
-                      "max_train_steps": ${{ inputs.max-train-steps }},
-             
+                      "max_train_steps": ${{ inputs.max-train-steps }}
                   },
                   "model": "${{ inputs.model-name }}",
-                  "trainer_version": "d5e058608f43886b9620a8fbb1501853b8cbae4f45c857a014011c86ee614ffb"
+                  "trainer_version": "f178fa7a1ae43a9a9af01b833b9d2ecf97b1bcb0acfd2dc5dd04895e042863f1"
               }' \
           https://dreambooth-api-experimental.replicate.com/v1/trainings
 
